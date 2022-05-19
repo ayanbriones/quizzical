@@ -1,38 +1,122 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+body {
+  height: auto;
+  background-color: #F5F7FB;
+  font-family: 'Karla';
+}
+
+main {
+  display: flex;
+  position: relative;
+  min-height: 550px;
+  justify-content: center;
+  align-items: center;
+}
+
+.blob-blue {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.blob-yellow {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.start--title, .start--description {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.start {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.start--description {
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 12px;
+  color: #293264;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.start-button {
+  margin: 50px 0;
+}
+.start-button, .button-check {
+  width: 193px;
+  height: 52px;
+  background: #4D5B9E;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  border: none;
+}
+.button-check {
+  align-self: center;
+}
+.questions {
+  width: 550px;
   display: flex;
   flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+
+}
+
+.item--question, .result {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  /* line-height: 19px; */
+  color: #293264;
+}
+
+.item--choices {
+  /* display: flex;
+  justify-content: space-between;
+  margin-right: auto; */
+}
+.item--button {
+  padding: 5px;
+  margin-right: 13px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  text-align: center;
+  color: #293264;
+  border-radius: 7.7px;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.result-wrapper {
+  display: flex;
+  height: 100px;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.selected {
+  background-color: #D6DBF5;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
+.correct {
+  background-color: #94D7A2;
+  color: #293264;
+  border: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wrong {
+  background-color: #F8BCBC;
+  color: #293264;
+  border: none;
 }
